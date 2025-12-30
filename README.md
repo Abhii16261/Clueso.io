@@ -1,73 +1,140 @@
-# Welcome to your Lovable project
+# Clueso.io – Full-Stack Product Feedback Platform (Clone)
 
-## Project info
+## Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project is a full-stack functional clone of Clueso.io**, built as a technical assignment to demonstrate product thinking, system design, and clean engineering practices**.
 
-## How can I edit this code?
+The objective of this implementation is to closely replicate **Clueso’s core workflows and user experience**, focusing on **feature parity, data flow, and architectural clarity** rather than pixel-perfect UI replication.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Product Understanding
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Clueso is a product feedback and insights platform that helps teams:
+- Collect structured user feedback
+- Organize and manage feedback efficiently
+- Generate AI-powered summaries and insights
+- View and act on feedback from a centralized dashboard
 
-Changes made via Lovable will be committed automatically to this repo.
+This clone recreates those flows end-to-end, including authentication, dashboard interaction, feedback collection, backend processing, and AI-assisted insight generation.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Architecture Overview
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The application follows a **modular and scalable architecture** with clear separation of concerns.
 
-Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Architectural Principles
+- Clear separation between UI, business logic, and data access
+- RESTful API communication
+- Stateless backend with JWT-based authentication
+- AI layer abstracted to allow easy integration of real AI providers
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
+### Frontend
+- React / Next.js
 - Tailwind CSS
+- Axios / Fetch API
+- JWT authentication handling
 
-## How can I deploy this project?
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+- Middleware-based request validation
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Database
+- PostgreSQL (via Supabase)
+- Relational schema design
+- Secure data access patterns
 
-## Can I connect a custom domain to my Lovable project?
+### AI Integration
+- Mock AI summarization service
+- Interface designed for OpenAI / Claude / Gemini integration
+- AI logic isolated from core business logic
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Core Features
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### User Authentication & Onboarding
+- User registration and login
+- Secure session handling using JWT
+- Protected routes and role-based access
+
+### Dashboard Experience
+- Central dashboard for authenticated users
+- Feedback overview and navigation
+- Clean layout inspired by Clueso’s workflow
+
+### Feedback Collection
+- Create and submit product feedback
+- Store feedback with metadata
+- Backend validation and structured storage
+
+### AI-Powered Insights
+- Automatic feedback summarization
+- Insight generation (mocked implementation)
+- Clearly documented AI abstraction layer
+
+### Data Management
+- CRUD operations for feedback
+- Consistent API responses
+- Robust error handling and edge-case management
+
+---
+
+## Folder Structure
+
+/frontend
+├── components
+├── pages
+├── services
+└── utils
+
+/backend
+├── routes
+├── controllers
+├── middleware
+├── services
+└── models
+
+/ai
+└── insightService.js
+
+# Application Flow
+
+User signs up or logs in
+
+User accesses the dashboard
+
+Feedback is submitted through the UI
+
+Feedback is stored and displayed
+
+AI insights are generated and shown
+
+# Error Handling & Best Practices
+
+Input validation on backend APIs
+
+User-friendly frontend error messages
+
+Authentication and authorization checks
+
+Graceful handling of empty or invalid data
+
+Clean and readable codebase with modular structure
+
+# Assumptions & Limitations
+
+AI functionality is mocked due to API cost and access constraints
+
+Browser extension layer is optional and not included
+
+Focus is on functionality and workflow accuracy over UI perfection
+
