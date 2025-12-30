@@ -4,7 +4,7 @@ LIVE DEMO LINK - https://clueso-io-pearl.vercel.app/
 
 ## Overview
 
-This project is a full-stack functional clone of Clueso.io**, built as a technical assignment to demonstrate product thinking, system design, and clean engineering practices**.
+This project is a full-stack functional clone of Clueso.io**, to demonstrate product thinking, system design, and clean engineering practices**.
 
 The objective of this implementation is to closely replicate **Clueso’s core workflows and user experience**, focusing on **feature parity, data flow, and architectural clarity** rather than pixel-perfect UI replication.
 
